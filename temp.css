@@ -1,0 +1,32 @@
+div{
+    margin-top: 7vw;
+    margin-left: 30vw;
+    width: 48vw;
+    height: 33vw;
+    background-color: green;
+
+}
+
+body{
+    margin: 0vw;
+    padding: 0vw;
+}
+
+div h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3vw;
+    color: white;
+}
+
+.center-button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+  }
+  

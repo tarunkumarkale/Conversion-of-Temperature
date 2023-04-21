@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="temp.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1> 🌞 Welcome to temperature converter</h1>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <label for="tem"><span style="color:whitesmoke;font-size: 1vw;">Enter temperature:</span></label>
+        <input type="number" id="tem" value="" placeholder="Enter your value">
+
+       
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <label for="temp-typ"><span style="color:whitesmoke;font-size: 1vw;">Select temperature type:</span></label>
+        <select id="temp-type">
+          <option value="fah">Fahrenheit</option>
+          <option value="cel">Celsius</option>
+        </select>
+
+        <br><br>
+        <button class="center-button" onclick="convert()">Convert</button>
+        <br><br>
+        <h1 id="result"></h1>
+
+        <script>
+          function convert() {
+            const temp = parseFloat(document.getElementById("tem").value);
+            const tempType = document.getElementById("temp-type").value;
+            let result = "";
+
+            if (tempType === "fah") {
+              const celsius = (temp - 32) * 5 / 9;
+              result = temp + "°F = " + celsius.toFixed(2) + "°C";
+            } else if (tempType === "cel") {
+              const fahrenheit = (temp * 9 / 5) + 32;
+              result = temp + "°C = " + fahrenheit.toFixed(2) + "°F";
+            }
+
+            document.getElementById("result").innerHTML = result;
+          }
+        </script>
+    </div>
+</body>
+</html>
